@@ -5,7 +5,7 @@ body{
     overflow-x: hidden;
     margin: 0;
     height: 100vh;
-    background-image: url('../images/WebsiteGradient.png');
+    background-image: url('https://ashleyweisportfolioresources.s3.us-west-2.amazonaws.com/images/WebsiteGradient.png');
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -277,7 +277,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/KoreGif1.gif') no-repeat center center/cover;
+    background: url('https://ashleyweisportfolioresources.s3.us-west-2.amazonaws.com/images/KoreGif1.gif') no-repeat center center/cover;
     z-index: -1;
     opacity: 0.7;
 }
