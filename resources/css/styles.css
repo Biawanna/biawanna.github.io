@@ -180,6 +180,7 @@ table {
 #professional-projects-table td, #personal-projects-table td {
     vertical-align: top; 
     padding: 10px; 
+    text-align: left;
 }
 
 aside {
