@@ -358,52 +358,61 @@ button:hover {
 
 #contact-section {
     display: block;
-    max-width: 90%; 
-    margin: 20px auto;
+    max-width: 600px; 
+    width: 90%; 
+    margin: 40px auto; 
     text-align: center;
+    padding: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 10px;
 }
 
 #contact-section h2 {
-    font-size: 6vw; 
+    font-size: 24px; 
     margin-bottom: 15px;
 }
 
 #contact-section form {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 15px; 
+    padding: 10px 0;
 }
 
 #contact-section input,
 #contact-section textarea {
-    padding: 10px;
-    font-size: 4vw; 
+    padding: 12px;
+    font-size: 16px; 
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    width: 100%; 
     box-sizing: border-box; 
+    font-family: 'Source Code Pro', monospace;
 }
 
 #contact-section button {
-    padding: 10px;
-    font-size: 4vw; 
+    padding: 12px;
+    font-size: 16px; 
     border: 2px solid #ccc;  
-    background-color: transparent;
+    background-color: transparent; 
+    color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #contact-section button:hover {
-    background-color: #555;
+    background-color: gray;
 }
 
-.site-footer {
+.site-footer h3{
     background-color: #333; 
     color: white; 
     text-align: center; 
     padding: 1rem 0; 
     font-weight: 300; 
-    font-size: 3vw; 
+    font-size: 1vw; 
     opacity: 0.5;
     letter-spacing: 1.1px; 
     width: 100%;
