@@ -141,7 +141,7 @@ body {
 
 .title {
     text-align: center;
-    font-size: 6vw;
+    font-size: 4vw;
     padding: 5%;
     margin-bottom: 0;
 }
@@ -336,12 +336,13 @@ button:hover {
 .section-buttons button {
     margin: 10px 0;
     padding: 10px 20px;
-    font-size: 4vw; 
+    font-size: 2vw; 
     cursor: pointer;
     border: 2px solid #ccc;
     border-radius: 5px;
     background-color: transparent;
     color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .section-buttons button:hover {
