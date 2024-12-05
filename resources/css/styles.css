@@ -14,10 +14,10 @@ body {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center; 
     background-color: #333; 
-    opacity: 0.5;
+    opacity: 0.6;
     color: white; 
     padding: 0.5rem 1rem;
     position: fixed; 
@@ -26,17 +26,14 @@ body {
     z-index: 1000;
 }
 
-.navbar h1 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
 .navbar ul {
     list-style: none; 
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1rem;
+    gap: 2rem; 
+    justify-content: center; 
+    align-items: center;
 }
 
 .navbar li {
@@ -388,7 +385,7 @@ button:hover {
     text-align: center;
     padding: 20px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-    background-color: rgba(51, 51, 51, 0.8);
+    background-color: rgba(51, 51, 51, 0.6);
     border-radius: 10px;
 }
 
