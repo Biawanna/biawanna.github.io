@@ -39,7 +39,6 @@ button{
     letter-spacing: 1px;
 }
 
-
 /* Navbar Styles */
 .navbar {
     background-color: rgba(51, 51, 51, 0.6);
@@ -267,7 +266,6 @@ section {
     list-style: none;
 }
 
-
 /* Section Buttons */
 .section-buttons {
     text-align: center;
@@ -392,10 +390,9 @@ section {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    /* Navbar */
-    .navbar ul {
-        flex-direction: column;
-        gap: 0.5rem;
+    /* Hide Navbar on Mobile Devices */
+    .navbar {
+        display: none;
     }
 
     /* Banner */
