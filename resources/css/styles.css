@@ -219,20 +219,54 @@ section {
     list-style: disc inside;
 }
 
+/* Additional Skills Section */
 .additional-skills {
+    position: relative;
+    padding: 60px 20px;
     text-align: center;
-    margin-top: 40px;
+    color: white;
+    margin: 60px 60px 0px 60px;
+    background-image: url('https://ashleyweisportfolioresources.s3.us-west-2.amazonaws.com/images/KoreGif1.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.additional-skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: -1;
 }
 
 .additional-skills h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
 }
 
 .additional-skills ul {
     display: inline-block;
     text-align: left;
+    list-style: disc outside;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    position: relative;
 }
+
+.additional-skills li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
 
 /* Section Buttons */
 .section-buttons {
@@ -396,6 +430,18 @@ section {
     /* Skills Section */
     .skills-column {
         max-width: 100%;
+    }
+
+    .additional-skills {
+        padding: 40px 20px;
+    }
+
+    .additional-skills h3 {
+        font-size: 1.5rem;
+    }
+
+    .additional-skills li {
+        font-size: 1rem;
     }
 
     /* Media Section */
