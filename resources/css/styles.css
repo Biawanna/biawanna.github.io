@@ -1,10 +1,10 @@
+/* Global Styles */
 body {
     color: white;
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 1.1px;
     overflow-x: hidden;
     margin: 0;
-    height: 100vh;
     background-image: url('https://ashleyweisportfolioresources.s3.us-west-2.amazonaws.com/images/WebsiteGradient.png');
     background-size: cover;
     background-repeat: repeat;
@@ -14,26 +14,26 @@ body {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    background-color: #333; 
-    opacity: 0.6;
-    color: white; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.6);
+    color: white;
     padding: 0.5rem 1rem;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
 .navbar ul {
-    list-style: none; 
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 2rem; 
-    justify-content: center; 
+    gap: 2rem;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 .navbar li {
@@ -41,104 +41,87 @@ body {
 }
 
 .navbar a {
-    text-decoration: none; 
-    color: white; 
-    padding: 0.5rem 1rem; 
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .navbar a:hover {
-    background-color: #555; 
+    background-color: #555;
 }
 
+/* Banner Section */
 .banner {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-bottom: 20%;
-}
-
-#career-title {
-    margin-top: 0%;
-    padding-top: 0%;
-    text-align: center;
-    justify-content: center;
-    font-size: 25px;
+    padding: 100px 20px;
 }
 
 #name {
     font-weight: bold;
-    font-size: 8vw; 
-    letter-spacing: 5px; 
-    margin-top: 20vh; 
-    margin-bottom: 0%;
-    padding-bottom: 0%;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin: 0;
 }
 
+#career-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* About Me Section */
 #about-me-section {
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center; 
-    gap: 20px; 
+    align-items: flex-start;
+    gap: 40px;
     padding: 2rem;
-    text-align: left; 
-}
-
-#profile-pic {
-    width: 80%; 
-    max-width: 360px;
-    height: auto; 
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-#about-me-section {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center;
-    align-items: center; 
-    gap: 40px; 
-    padding: 2rem;
-    text-align: left; 
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
 }
 
 #profile-pic {
-    width: 300px; 
-    height: auto; 
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #about-me-content {
-    flex: 1; 
-    display: flex; 
+    flex: 1;
+    display: flex;
     flex-direction: column;
-    justify-content: center; 
-    gap: 10px; 
-    max-width: 600px; 
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
 }
 
 #about-me-title {
-    font-size: 6rem;
-    margin: 0; 
+    font-size: 2.5rem;
+    margin: 0;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 1.5px;
 }
 
 #about-me-section p {
-    font-size: 14px; 
-    line-height: 1.6; 
-    margin: 0; 
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
+/* Titles */
 .title {
     text-align: center;
-    font-size: 4vw;
+    font-size: 2rem;
     padding: 5%;
     margin-bottom: 0;
 }
@@ -151,14 +134,15 @@ h1, h2, h3, th {
     letter-spacing: 1px;
 }
 
-h1, h2{
-    font-size: 5vw; 
+h1, h2 {
+    font-size: 2rem;
 }
 
-h3{
-    font-size: 2vw;
+h3 {
+    font-size: 1.5rem;
 }
 
+/* Tables and Media */
 table {
     width: 90%;
     max-width: 1100px;
@@ -167,65 +151,70 @@ table {
 }
 
 .table-video, #video-image {
-    width: 100%; 
-    aspect-ratio: 16 / 9; 
+    width: 100%;
+    aspect-ratio: 16 / 9;
     border-radius: 5%;
     border: 0;
     height: auto;
 }
 
+/* Skills Container */
 .skills-container {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     gap: 10px;
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .skills-container aside {
     padding: 5px 15px;
-    border-radius: 5px; 
-    text-align: center; 
+    border-radius: 5px;
+    text-align: center;
     max-height: 25px;
-    font-size: 4vw; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Projects Tables */
 #professional-projects-table, #personal-projects-table {
-    width: 100%; 
-    table-layout: fixed; 
-    border-collapse: collapse; 
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
 }
 
 #professional-projects-table td, #personal-projects-table td {
-    vertical-align: top; 
-    padding: 10px; 
+    vertical-align: top;
+    padding: 10px;
     text-align: left;
 }
 
+/* Buttons */
 button {
     color: white;
     background-color: transparent;
     font-family: 'Abel', sans-serif;
     font-weight: 300;
     letter-spacing: 3px;
-    font-size: 4vw; 
+    font-size: 1rem;
     border: 0;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: white;
-    border: 1px;
     border-radius: 5%;
+    color: #333;
 }
 
+/* Image Container */
 .image-container {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    border-radius: 5%; 
-    border: 2px solid transparent; 
-    transition: border-color 0.3s ease; 
+    border-radius: 5%;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
 }
 
 .image-container img {
@@ -237,7 +226,7 @@ button:hover {
 }
 
 .image-container:hover {
-    border-color: white; 
+    border-color: white;
     background-color: transparent;
 }
 
@@ -245,14 +234,7 @@ button:hover {
     transform: scale(1.1);
 }
 
-.button-container {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-}
-
+/* Technical Skills Section */
 .technical-skills-container {
     position: relative;
     padding: 20px;
@@ -273,23 +255,22 @@ button:hover {
 }
 
 .technical-skills-table {
-    width: 90%; 
+    width: 90%;
     margin: 20px auto;
-    border-collapse: separate; 
-    border-spacing: 0; 
+    border-collapse: separate;
+    border-spacing: 0;
     text-align: left;
-    border-radius: 10px; 
-    overflow: hidden; 
-    border: 1px solid black; 
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
 }
 
 .technical-skills-table th {
     text-align: center;
-    font-size: 3vw;
+    font-size: 1.5rem;
     padding: 10px;
     background-color: rgba(51, 51, 51, 0.5);
     color: white;
-    width: 50%; 
 }
 
 .technical-skills-table td {
@@ -303,6 +284,7 @@ button:hover {
     list-style: none;
 }
 
+/* Section Buttons */
 .section-buttons {
     text-align: center;
     margin: 20px 0;
@@ -312,111 +294,81 @@ button:hover {
 .section-buttons button {
     margin: 10px 0;
     padding: 10px 20px;
-    font-size: 2vw; 
+    font-size: 1rem;
     cursor: pointer;
     border: 2px solid #ccc;
     border-radius: 5px;
     background-color: transparent;
     color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .section-buttons button:hover {
     background-color: #555;
 }
 
-#spotify-video-container {
+/* Spotify and Video Sections */
+#spotify-video-container, #video-section, #spotify-widget {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; 
-    padding: 20px; 
-    text-align: center; 
-    max-width: 600px; 
-    margin: 0 auto; 
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.spotify-widget {
-    display: block;
-    width: 90%; 
-    max-width: 500px; 
-    margin: 0 auto; 
-}
-
-#music-video {
-    width: 90%; 
-    max-width: 500px; 
-    height: auto;
-    aspect-ratio: 16 / 9; 
-    border: 0;
-    border-radius: 5%;
-    margin: 0 auto; 
-}
-
-.spotify-widget aside, #video-section aside {
+.spotify-widget iframe, #video-section iframe {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto;
-    padding: 10px; 
-    box-sizing: border-box;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 5%;
 }
 
-#video-section, #spotify-widget {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    gap: 20px; 
-}
-
-#video-section iframe, #spotify-widget iframe {
-    width: 90%; 
-    max-width: 500px; 
-    margin: 0 auto;
-}
-
+/* Contact Section */
 #contact-section {
     display: block;
-    max-width: 600px; 
-    width: 90%; 
-    margin: 40px auto; 
+    max-width: 600px;
+    width: 90%;
+    margin: 40px auto;
     text-align: center;
-    padding: 20px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     background-color: rgba(51, 51, 51, 0.6);
     border-radius: 10px;
 }
 
 #contact-section h2 {
-    font-size: 24px; 
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
 #contact-section form {
     display: flex;
     flex-direction: column;
-    gap: 15px; 
+    gap: 15px;
     padding: 10px 0;
 }
 
 #contact-section input,
 #contact-section textarea {
     padding: 12px;
-    font-size: 16px; 
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
+    box-sizing: border-box;
     font-family: 'Source Code Pro', monospace;
 }
 
 #contact-section button {
     padding: 12px;
-    font-size: 16px; 
-    border: 2px solid #ccc;  
-    background-color: transparent; 
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    background-color: transparent;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -427,39 +379,92 @@ button:hover {
     background-color: gray;
 }
 
-.site-footer h3{
-    background-color: #333; 
-    color: white; 
-    text-align: center; 
-    padding: 1rem 0; 
-    font-weight: 300; 
-    font-size: 1vw; 
+/* Footer */
+.site-footer h3 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 300;
+    font-size: 1rem;
     opacity: 0.5;
-    letter-spacing: 1.1px; 
+    letter-spacing: 1.1px;
     width: 100%;
-    margin-top: 2rem; 
+    margin-top: 2rem;
 }
 
-/* Mobile-Specific Adjustments */
+/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+    /* Navbar */
     .navbar ul {
-        flex-direction: column; 
-        gap: 0.5rem; 
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
-    .navbar h1 {
-        font-size: 4vw; 
+    /* Adjust Heading Sizes */
+    #name {
+        font-size: 2rem;
     }
 
+    #career-title {
+        font-size: 1.2rem;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* About Me Section */
     #about-me-section {
-        padding: 1rem; 
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
     }
 
     #about-me-title {
-        letter-spacing: 2px; 
+        font-size: 2rem;
+        letter-spacing: 1px;
     }
 
-    .skills-container {
-        align-items: center;
+    #about-me-section p {
+        font-size: 0.9rem;
+    }
+
+    /* Skills Container */
+    .skills-container aside {
+        font-size: 0.9rem;
+    }
+
+    /* Buttons */
+    button, .section-buttons button {
+        font-size: 0.9rem;
+    }
+
+    /* Technical Skills Table */
+    .technical-skills-table th, .technical-skills-table td {
+        font-size: 1rem;
+    }
+
+    /* Contact Section */
+    #contact-section h2 {
+        font-size: 1.2rem;
+    }
+
+    #contact-section input,
+    #contact-section textarea {
+        font-size: 0.9rem;
+    }
+
+    #contact-section button {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .site-footer h3 {
+        font-size: 0.8rem;
     }
 }
