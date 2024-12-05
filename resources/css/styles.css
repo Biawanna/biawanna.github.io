@@ -1,4 +1,4 @@
-body{
+body {
     color: white;
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 1.1px;
@@ -11,12 +11,13 @@ body{
     background-position: center;
 }
 
+/* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center; 
     background-color: #333; 
-    opacity: 0.5;
+    opacity: 0.6;
     color: white; 
     padding: 0.5rem 1rem;
     position: fixed; 
@@ -25,17 +26,14 @@ body{
     z-index: 1000;
 }
 
-.navbar h1 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
 .navbar ul {
     list-style: none; 
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1rem;
+    gap: 2rem; 
+    justify-content: center; 
+    align-items: center;
 }
 
 .navbar li {
@@ -71,15 +69,16 @@ body{
 
 #name {
     font-weight: bold;
-    font-size: 110px;
-    letter-spacing: 30px;
-    margin-top: 225px;
+    font-size: 8vw; 
+    letter-spacing: 5px; 
+    margin-top: 20vh; 
     margin-bottom: 0%;
     padding-bottom: 0%;
 }
 
 #about-me-section {
     display: flex; 
+    flex-direction: column; 
     justify-content: center;
     align-items: center; 
     gap: 20px; 
@@ -88,59 +87,86 @@ body{
 }
 
 #profile-pic {
-    width: 360px; 
+    width: 80%; 
+    max-width: 360px;
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#about-me-section {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center; 
+    gap: 40px; 
+    padding: 2rem;
+    text-align: left; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+#profile-pic {
+    width: 300px; 
     height: auto; 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #about-me-content {
+    flex: 1; 
     display: flex; 
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: center; 
     gap: 10px; 
+    max-width: 600px; 
 }
 
 #about-me-title {
-    font-size: 96px; 
+    font-size: 6rem;
     margin: 0; 
     text-transform: uppercase;
     font-weight: 300;
-    letter-spacing: 15px;
+    letter-spacing: 1.5px;
 }
 
-#about-me-paragraph {
-    font-size: 16px; 
+#about-me-section p {
+    font-size: 14px; 
     line-height: 1.6; 
-    max-width: 600px; 
-    padding-left: 5px;
     margin: 0; 
 }
 
 .title {
     text-align: center;
-    font-size: 45px;
+    font-size: 4vw;
     padding: 5%;
     margin-bottom: 0;
 }
 
-h2, h1, th {
+h1, h2, h3, th {
     font-family: 'Abel', sans-serif;
-    font-weight: 300;
-    font-size: 36px;
-    letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+h1, h2{
+    font-size: 5vw; 
+}
+
+h3{
+    font-size: 2vw;
 }
 
 table {
-    width: 80%;
+    width: 90%;
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
 }
 
-.table-video , #video-image {
+.table-video, #video-image {
     width: 100%; 
     aspect-ratio: 16 / 9; 
     border-radius: 5%;
@@ -148,17 +174,11 @@ table {
     height: auto;
 }
 
-.table-video td {
-    text-align: left;
-    justify-content: center;
-    padding: 15px 15px;
-}
-
 .skills-container {
     display: flex;
-    justify-content: flex-start; 
+    flex-direction: column;
+    align-items: center; 
     gap: 10px;
-    flex-wrap: wrap; 
     max-width: 100%; 
 }
 
@@ -167,7 +187,7 @@ table {
     border-radius: 5px; 
     text-align: center; 
     max-height: 25px;
-    font-size: 14px; 
+    font-size: 4vw; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
@@ -183,21 +203,13 @@ table {
     text-align: left;
 }
 
-aside {
-    text-align: center;
-    width: 50%;
-    /* background-color:  rgb(92, 76, 75);
-    color: white;
-    opacity: 0.7; */
-}
-
 button {
     color: white;
     background-color: transparent;
     font-family: 'Abel', sans-serif;
     font-weight: 300;
     letter-spacing: 3px;
-    font-size: 14px;
+    font-size: 4vw; 
     border: 0;
 }
 
@@ -235,33 +247,10 @@ button:hover {
 
 .button-container {
     display: flex;
+    flex-direction: column; 
     justify-content: center;
+    align-items: center;
     margin: 20px 0;
-}
-
-.button-container button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.button-container button:hover {
-    background-color: #45a049;
-}
-
-.content-section {
-    display: none;
-    margin-top: 20px;
-}
-
-.content-section.active {
-    display: block;
 }
 
 .technical-skills-container {
@@ -284,7 +273,7 @@ button:hover {
 }
 
 .technical-skills-table {
-    width: 50%;
+    width: 90%; 
     margin: 20px auto;
     border-collapse: separate; 
     border-spacing: 0; 
@@ -296,7 +285,7 @@ button:hover {
 
 .technical-skills-table th {
     text-align: center;
-    font-size: 20px;
+    font-size: 3vw;
     padding: 10px;
     background-color: rgba(51, 51, 51, 0.5);
     color: white;
@@ -310,134 +299,167 @@ button:hover {
     color: white;
 }
 
-
-#technical-skills-list h2, #technical-skills-list li {
-    font-size: 20px;
+#technical-skills-list li {
     list-style: none;
-}
-
-.languages-list, .software-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-.technical-skills-table ul {
-    padding-left: 20px;
-    text-align: left;
-}
-
-.software-list-container {
-    display: flex;           
-    gap: 20px;              
-    width: 100%;          
-}
-
-.software-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    flex: 1;                
-}
-
-.hidden {
-    display: none; 
-}
-
-.visible {
-    display: block; 
 }
 
 .section-buttons {
     text-align: center;
     margin: 20px 0;
-    padding: 50px 50px;
+    padding: 20px;
 }
 
 .section-buttons button {
-    margin: 0 10px;
+    margin: 10px 0;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 2vw; 
     cursor: pointer;
     border: 2px solid #ccc;
     border-radius: 5px;
     background-color: transparent;
     color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .section-buttons button:hover {
     background-color: #555;
 }
 
+#spotify-video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    padding: 20px; 
+    text-align: center; 
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.spotify-widget {
+    display: block;
+    width: 90%; 
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
 #music-video {
-    width: 800px;
-    height: 450px;
+    width: 90%; 
+    max-width: 500px; 
+    height: auto;
     aspect-ratio: 16 / 9; 
     border: 0;
     border-radius: 5%;
-    padding-top: 0px;
+    margin: 0 auto; 
 }
 
-#spotify-widget, #video-section, #personal-projects {
+.spotify-widget aside, #video-section aside {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+#video-section, #spotify-widget {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-    padding-bottom: 5%;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px; 
+}
+
+#video-section iframe, #spotify-widget iframe {
+    width: 90%; 
+    max-width: 500px; 
+    margin: 0 auto;
 }
 
 #contact-section {
     display: block;
-    max-width: 400px;
-    margin: 20px auto;
+    max-width: 600px; 
+    width: 90%; 
+    margin: 40px auto; 
     text-align: center;
+    padding: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    background-color: rgba(51, 51, 51, 0.6);
+    border-radius: 10px;
 }
 
 #contact-section h2 {
-    font-size: 1.5rem;
+    font-size: 24px; 
     margin-bottom: 15px;
 }
 
 #contact-section form {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 15px; 
+    padding: 10px 0;
 }
 
 #contact-section input,
 #contact-section textarea {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 12px;
+    font-size: 16px; 
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    width: 100%; 
     box-sizing: border-box; 
+    font-family: 'Source Code Pro', monospace;
 }
 
 #contact-section button {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 12px;
+    font-size: 16px; 
     border: 2px solid #ccc;  
-    background-color: transparent;
+    background-color: transparent; 
+    color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #contact-section button:hover {
-    background-color: #555;
+    background-color: gray;
 }
 
-.site-footer {
+.site-footer h3{
     background-color: #333; 
     color: white; 
     text-align: center; 
     padding: 1rem 0; 
     font-weight: 300; 
-    font-size: 15px;
+    font-size: 1vw; 
     opacity: 0.5;
     letter-spacing: 1.1px; 
     width: 100%;
     margin-top: 2rem; 
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; 
+        gap: 0.5rem; 
+    }
+
+    .navbar h1 {
+        font-size: 4vw; 
+    }
+
+    #about-me-section {
+        padding: 1rem; 
+    }
+
+    #about-me-title {
+        letter-spacing: 2px; 
+    }
+
+    .skills-container {
+        align-items: center;
+    }
 }
