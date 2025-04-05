@@ -1,28 +1,44 @@
-/* Import Fonts */
+/* -----------------------------------------------------------
+   Import Fonts
+----------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Source+Code+Pro&display=swap');
 
-/* Global Styles */
-body {
-    margin: 0;
-    font-family: 'Source Code Pro', monospace;
-    color: white;
-    background: url('https://ashleyweisportfolioresources.s3.us-west-2.amazonaws.com/images/WebsiteGradient.png') center/cover repeat;
-    overflow-x: hidden;
+/* -----------------------------------------------------------
+   CSS Variables
+----------------------------------------------------------- */
+:root {
+    --font-primary: 'Source Code Pro', monospace;
+    --font-secondary: 'Abel', sans-serif;
+    --text-color: #fff;
+    --nav-bg: rgba(51, 51, 51, 0.6);
+    --nav-hover-bg: #555;
+    --btn-border: #ccc;
+    --footer-bg: #333;
 }
 
-/* Resetting default margins and paddings */
+/* -----------------------------------------------------------
+   Global Reset & Base Styles
+----------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background: url('https://ashleyweisportfolioresources.s3.us-west-2.amazonaws.com/images/WebsiteGradient.png') center/cover repeat;
+    overflow-x: hidden;
+}
+
+/* Typography */
 h1, h2, h3 {
-    font-family: 'Abel', sans-serif;
+    font-family: var(--font-secondary);
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: 0;
 }
 
 p, li {
@@ -32,8 +48,6 @@ p, li {
 
 ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 a {
@@ -42,15 +56,15 @@ a {
 }
 
 button {
-    font-family: 'Abel', sans-serif;
+    font-family: var(--font-secondary);
     letter-spacing: 1px;
-    /* Ensure buttons have consistent box-sizing */
-    box-sizing: border-box;
 }
 
-/* Navbar Styles */
+/* -----------------------------------------------------------
+   Navbar
+----------------------------------------------------------- */
 .navbar {
-    background-color: rgba(51, 51, 51, 0.6);
+    background-color: var(--nav-bg);
     position: fixed;
     top: 0;
     width: 100%;
@@ -71,7 +85,7 @@ button {
 }
 
 .navbar a {
-    color: white;
+    color: var(--text-color);
     padding: 0.5rem;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -79,10 +93,12 @@ button {
 }
 
 .navbar a:hover {
-    background-color: #555;
+    background-color: var(--nav-hover-bg);
 }
 
-/* Banner Styles */
+/* -----------------------------------------------------------
+   Banner Section
+----------------------------------------------------------- */
 .banner {
     display: flex;
     flex-direction: column;
@@ -105,7 +121,9 @@ button {
     text-align: center;
 }
 
-/* Section Styles */
+/* -----------------------------------------------------------
+   Sections & Containers
+----------------------------------------------------------- */
 section {
     padding: 60px 20px;
 }
@@ -148,21 +166,24 @@ section {
     font-size: 2rem;
 }
 
-/* Projects Grid */
+/* -----------------------------------------------------------
+   Projects Grid & Cards
+----------------------------------------------------------- */
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-card {
-    background-color: rgba(51, 51, 51, 0.6);
+    background-color: var(--nav-bg);
     border-radius: 10px;
     padding: 20px;
-    width: 100%;
-    max-width: 350px;
-    box-sizing: border-box;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
 }
 
 .project-card .image-container {
@@ -201,7 +222,9 @@ section {
     margin-top: 10px;
 }
 
-/* Skills Section */
+/* -----------------------------------------------------------
+   Skills Section
+----------------------------------------------------------- */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -210,12 +233,11 @@ section {
 }
 
 .skills-column {
-    background-color: rgba(51, 51, 51, 0.6);
+    background-color: var(--nav-bg);
     border-radius: 10px;
     padding: 20px;
     width: 100%;
     max-width: 300px;
-    box-sizing: border-box;
 }
 
 .skills-column h3 {
@@ -227,21 +249,22 @@ section {
     list-style: disc inside;
 }
 
-/* Additional Skills Section */
+/* -----------------------------------------------------------
+   Additional Skills Section
+----------------------------------------------------------- */
 .additional-skills {
     position: relative;
-    padding: 60px 0; 
+    padding: 60px 0;
     text-align: center;
-    color: white;
-    margin: 60px 0 0 0;
+    color: var(--text-color);
+    margin-top: 60px;
     background-image: url('https://ashleyweisportfolioresources.s3.us-west-2.amazonaws.com/images/KoreGif1.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
-    width: 100%; 
+    width: 100%;
     border-radius: 10px;
-
 }
 
 .additional-skills::before {
@@ -251,7 +274,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
     border-radius: 10px;
 }
@@ -259,8 +282,8 @@ section {
 .additional-skills h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    z-index: 2;
     position: relative;
+    z-index: 2;
 }
 
 .additional-skills ul {
@@ -269,17 +292,18 @@ section {
     list-style: disc outside;
     margin: 0;
     padding: 0;
-    z-index: 2;
     position: relative;
+    z-index: 2;
 }
 
 .additional-skills li {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    list-style: none;
 }
 
-/* Section Buttons */
+/* -----------------------------------------------------------
+   Section Buttons
+----------------------------------------------------------- */
 .section-buttons {
     text-align: center;
     margin-bottom: 40px;
@@ -289,19 +313,21 @@ section {
     margin: 0 10px;
     padding: 10px 20px;
     font-size: 1rem;
-    border: 2px solid #ccc;
+    border: 2px solid var(--btn-border);
     border-radius: 5px;
     background-color: transparent;
-    color: white;
+    color: var(--text-color);
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .section-buttons button:hover {
-    background-color: #555;
+    background-color: var(--nav-hover-bg);
 }
 
-/* Interactive Sections */
+/* -----------------------------------------------------------
+   Interactive Sections
+----------------------------------------------------------- */
 #interactive-sections .hidden {
     display: none;
 }
@@ -314,7 +340,9 @@ section {
     margin-top: 0;
 }
 
-/* Media Section */
+/* -----------------------------------------------------------
+   Media Section
+----------------------------------------------------------- */
 #spotify-widget,
 #video-section {
     display: flex;
@@ -343,11 +371,12 @@ section {
 #video-section p {
     width: 100%;
     max-width: 600px;
-    margin: 0;
     text-align: center;
 }
 
-/* Contact Section */
+/* -----------------------------------------------------------
+   Contact Section
+----------------------------------------------------------- */
 #contact-section {
     max-width: 600px;
     margin: 0 auto;
@@ -372,16 +401,15 @@ section {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
-    box-sizing: border-box;
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--font-primary);
 }
 
 #contact-section button {
     padding: 12px;
     font-size: 1rem;
-    border: 2px solid #ccc;
+    border: 2px solid var(--btn-border);
     background-color: transparent;
-    color: white;
+    color: var(--text-color);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -391,42 +419,44 @@ section {
     background-color: gray;
 }
 
-/* Footer Styles */
+/* -----------------------------------------------------------
+   Footer
+----------------------------------------------------------- */
 .site-footer {
-    background-color: #333;
+    background-color: var(--footer-bg);
     opacity: 0.5;
     padding: 1rem 0;
     text-align: center;
 }
 
 .site-footer p {
-    margin: 0;
     font-size: 1rem;
     letter-spacing: 1.1px;
 }
 
-/* Responsive Styles */
+/* -----------------------------------------------------------
+   Responsive Styles
+----------------------------------------------------------- */
 @media (max-width: 768px) {
-    /* Hide Navbar on Mobile Devices */
+    /* Navbar: Hide on Mobile */
     .navbar {
         display: none;
     }
 
-    /* Stack Section Buttons on Mobile Devices */
+    /* Section Buttons: Stack Vertically */
     .section-buttons {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .section-buttons button {
-        display: block; /* Added this line */
+        display: block;
         margin: 10px 0;
         width: 100%;
         max-width: 250px;
     }
 
-    /* Banner */
+    /* Banner Adjustments */
     #name {
         font-size: 2rem;
     }
@@ -435,7 +465,7 @@ section {
         font-size: 1.2rem;
     }
 
-    /* Content Adjustments */
+    /* Container Adjustments */
     .container {
         flex-direction: column;
         align-items: center;
@@ -446,24 +476,25 @@ section {
         font-size: 2rem;
     }
 
-    /* Projects Grid */
+    /* Projects Grid: Adjust for smaller screens */
     .project-card {
         max-width: 100%;
     }
 
     .project-card .image-container {
-        height: 150px; /* Adjust the height for smaller screens if needed */
+        height: 150px;
     }
 
-    /* Skills Section */
+    /* Skills Section: Adjust for smaller screens */
     .skills-column {
         max-width: 100%;
     }
 
+    /* Additional Skills Section: Adjust spacing */
     .additional-skills {
-        padding: 40px 0; /* Removed side padding */
-        margin: 40px 0 0 0; /* Removed side margins */
-        width: 100%; /* Ensure full width */
+        padding: 40px 0;
+        margin-top: 40px;
+        width: 100%;
     }
 
     .additional-skills h3 {
@@ -474,13 +505,13 @@ section {
         font-size: 1rem;
     }
 
-    /* Media Section */
+    /* Media Section: Adjust iframe heights */
     #spotify-widget iframe,
     #video-section iframe {
         height: 200px;
     }
 
-    /* Contact Section */
+    /* Contact Section: Adjust text sizes */
     #contact-section h2 {
         font-size: 1.5rem;
     }
@@ -494,7 +525,7 @@ section {
         font-size: 0.9rem;
     }
 
-    /* Footer */
+    /* Footer Adjustments */
     .site-footer p {
         font-size: 0.8rem;
     }
