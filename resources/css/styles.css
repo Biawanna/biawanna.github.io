@@ -476,8 +476,9 @@ section {
         font-size: 2rem;
     }
 
-    /* Projects Grid: Adjust for smaller screens */
+    /* Projects Grid: Display projects in one column */
     .project-card {
+        flex: 1 1 100%;
         max-width: 100%;
     }
 
